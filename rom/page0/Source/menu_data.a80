@@ -294,9 +294,9 @@ TXT_WINHELP	DB 0X14,1,"Help",0X14,0
 
 ;***************’…Š‘’› ˆ Ž—€Ÿ ”ˆƒŸ********************
 
-TXTFULLSCR	DB 0X16,0X00,0X00,0X17,4,"KAY Reset Service v",VERSBIOS
-		DB 0X16,0X08,0X00,0X17,6,"KAY-1024/Turbo "
-		DB 0X16,0X10,0X00,0x17,0X45,"(C) NEDOPC TEAM 2010, (R) WCG 2015 "
+TXTFULLSCR	DB 0X16,0X00,0X00,0X17,4,"Karabas Reset Service v",VERSBIOS
+		DB 0X16,0X08,0X00,0X17,6,"Karabas-Nano rev.B"
+		DB 0X16,0X18,0X00,0x17,0X45,"(C) NEDOPC 2010,(R) WCG 2015,(R) ZP 2019"
 		DB 0X16,0XB8,0X00,0X17,3,"        Press ",0X17,0X43,"H ",0X17,3,"for view help page ",0
 ;		DB 0X16,0XB8,0X00,0X17,0X43,"W ",0X17,3,"Turbo on/off,",0X17,0X43," M ",0X17,3,"Memory lock 48/128/off",0X17,0XFF,0
 
@@ -399,7 +399,7 @@ mINSOUT		DB 7-WIDE,0X0C
 		DB 0XFF
 
 MSTUPID		DB 3,8,3,26,0XEA
-		DC "GO SLEEP,STUPID USER!!!"
+		DC "  << NOTHING THERE >>  "
 		DB 0XFF
 
 TXT_BETA	DB " beta"
@@ -455,8 +455,8 @@ WAITINGH	DW 0		;‘—…’—ˆŠ Ž†ˆ„€ˆŸ €†€’›• Š‹€‚ˆ˜ ˆ‹ˆ „‚ˆ†…ˆŸ Œ›˜ˆ
 WAITINGL	DB 0		;‘—…’—ˆŠ €“‡› ……ˆ‘Ž‚Šˆ ”€‡› ŠŽ˜€Š€
 NUMKOSHAK	DB 0		;ŽŒ… ‚›‚Ž„ˆŒŽƒŽ ‘€‰’€ ŠŽ˜€Š€
 
-KOSHAK		BINCLUDE kaylogo.bin
-
+KOSHAK          binclude kot_anim.bin,9
+ICON            binclude icon.bin,9
 BAS_VAR		BINCLUDE bas_var.bin
 END_BAS_VAR
 
